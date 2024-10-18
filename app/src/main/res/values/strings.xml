@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">InvestEasy</string>
+    <string name="tv_title">InvestEasy</string>
+    <string name="contribution_hint">Contribution per month:</string>
+    <string name="time_hint">quantity of months:</string>
+    <string name="interest_hint">interest in %</string>
+    <string name="btn_text_calculate">Calculate</string>
+    <string name="btn_text_clear">Clear</string>
+</resources>
