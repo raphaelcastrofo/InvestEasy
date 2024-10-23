@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val edtContribution = findViewById<TextInputEditText>(R.id.tie_contribution)
-        val edtTime = findViewById<TextInputEditText>(R.id.tie_time)
+        var edtContribution = findViewById<TextInputEditText>(R.id.tie_contribution)
+        var edtTime = findViewById<TextInputEditText>(R.id.tie_time)
         val edtInterest = findViewById<TextInputEditText>(R.id.tie_interest)
         val btnCalculate = findViewById<Button>(R.id.btn_calculate)
-        val btcClear = findViewById<Button>(R.id.btn_clear)
+        val btnClear = findViewById<Button>(R.id.btn_clear)
 
 
         val tvResult = findViewById<TextView>(R.id.tv_result)
@@ -65,10 +65,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        btcClear.setOnClickListener{
-            contributionStr == ""
-            edtTime == ""
-            edtInterest = ""
+        btnClear.setOnClickListener{
+
+            edtContribution.setText("")
+            edtTime.setText("")
+            edtInterest.setText("")
+
+            tvResult.text = "00.00"
+            tvYield.text = "R$ 00.00"
         }
 
 
@@ -78,5 +82,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
 }
 
